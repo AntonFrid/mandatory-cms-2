@@ -1,38 +1,107 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App__top {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 18vw;
+  padding-left: 1vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App__backButton {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 1;
+  transition: 0.1s;
+  transition-timing-function: ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App__backButton:hover {
+  background-color: #4DA8DA;
+  cursor: pointer;
+  color: white;
+  transition: 0.1s;
+  transition-timing-function: ease-in;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App__backButton__hidden {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.App__PartButtons {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10px;
+  transition: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.App__PartButtons__hidden {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.App__PartButtons h2, .App__PartButtons__hidden h2 {
   color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.App__PartButtons button, .App__PartButtons__hidden button {
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.1s;
+  transition-timing-function: ease-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__PartButtons button:hover {
+  background-color: #4DA8DA;
+  cursor: pointer;
+  color: white;
+  transition: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+body {
+  background-color: #203647;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
